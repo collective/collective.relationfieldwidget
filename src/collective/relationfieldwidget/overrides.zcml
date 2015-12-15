@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:z3c="http://namespaces.zope.org/z3c">
+  <!-- Set up widgets -->
+  
+  <configure package="plone.app.z3cform">
+    <adapter factory="collective.relationfieldwidget.browser.widget.RelatedItemsFieldWidget"
+      for="z3c.relationfield.interfaces.IRelationChoice
+        plone.app.z3cform.interfaces.IPloneFormLayer" />
+
+    <adapter factory="collective.relationfieldwidget.browser.widget.RelatedItemsFieldWidget"
+      for="z3c.relationfield.interfaces.IRelationList
+        plone.app.z3cform.interfaces.IPloneFormLayer" />
+    
+  </configure>
+    
+</configure>
