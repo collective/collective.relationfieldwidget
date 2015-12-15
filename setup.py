@@ -37,9 +37,8 @@ setup(
     author_email='matt.grant@foodstuffs-si.co.nz',
     url='https://pypi.python.org/pypi/collective.relationfieldwidget',
     license='GPL',
-    packages=find_packages('src', exclude=['ez_setup']),
+    packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['collective'],
-    package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     install_requires=[
