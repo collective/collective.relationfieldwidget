@@ -5,11 +5,14 @@ from z3c.form.interfaces import IFieldWidget
 from z3c.form.widget import FieldWidget
 from zope.component.hooks import getSite
 from zope.interface import implementer
+from zope.interface import implementsOnly
 from plone.app.z3cform.interfaces import IRelatedItemsWidget
-from plone.app.z3cform.widget import RelatedItemsWidget as plonez3cform_RelatedItemsWidget
+from plone.app.z3cform.widget import RelatedItemsWidget
 
-class RelatedItemsWidget(plonez3cform_RelatedItemsWidget):
+class RelationWidget(RelatedItemsWidget):
     """RelatedItems widget for z3c.form with clickable list of URLs as output"""
+
+    implementsOnly(IRelatedItemsWidget)
 
     def related_items(self):
         res = ()
@@ -29,9 +32,9 @@ class RelatedItemsWidget(plonez3cform_RelatedItemsWidget):
 
 
 @implementer(IFieldWidget)
-def RelatedItemsFieldWidget(field, request, extra=None):
+def RelationFieldWidget(field, request, extra=None):
     if extra is not None:
         request = extra
-    return FieldWidget(field, RelatedItemsWidget(request))
+    return FieldWidget(field, RelationWidget(request))
 
 

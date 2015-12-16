@@ -45,5 +45,5 @@
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="collective.relationfieldwidget-hiddenprofiles" />
-
+    
 </configure>
