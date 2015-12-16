@@ -6,12 +6,14 @@
 collective.relationfieldwidget
 ==============================================================================
 
-Tell me what your product does
+Adds a Related Items type output to Plone 5 Dexterity TTW form widgets
+RelationList and RelationChoice
 
 Features
 --------
 
-- Can be bullet points
+- Just replaces default widgets for display mode
+- uses overrides.zcml to override ploen.app.z3cform RelatedItemsWidget
 
 
 Examples
@@ -24,7 +26,7 @@ This add-on can be seen in action at the following sites:
 Documentation
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+Just install the product in plone, and you should be ready to go.
 
 
 Translations
